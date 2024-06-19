@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import WellBiengHeadline from '../Atoms/WellBiengHeadline';
 import api from '../../api';
+import Cookies from 'js-cookie';
 
 const Register = () => {
   const [formData, setFormData] = useState({ username: '', email: '', password: '' });
@@ -8,19 +10,28 @@ const Register = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData); 
     try {
-      const response = await api.post('https://localhost:7119/api/Account/register', formData);
-      console.log(response);
+      const response = await api.post('https://localhost:7119/api/Account/register', formData
+      );
+      const token = response.data.token;
+      Cookies.set('jwt', token, { secure: true, sameSite: 'Strict' });
+      console.log('Register successful, token:', response);
+      if (response.status === 200){
+        navigate('/main');
+      }
     } catch (error) {
-      console.error('Error during registration:', error);
+      console.error('Error during register:', error);
     }
   };
 
   return (
     <div className="min-h-screen bg-pink-100 flex flex-col items-center justify-center">
+      <WellBiengHeadline/>
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6 text-pink-600 text-center">Register</h2>
         <div className="mb-4">

@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import WellBiengHeadline from '../components/Atoms/WellBiengHeadline';
 
 function Home() {
     return (
         <div className="min-h-screen bg-pink-gradient flex flex-col items-center p-24 space-y-36 lg:space-y-64">
           <header className="text-center mb-8 w-full">
-            <h1 className="text-5xl font-bold text-pink-400 mb-4 lg:text-7xl">Well-being Diary</h1>
+            <WellBiengHeadline />
             <p className="text-lg text-gray-700">Track your well-being and self-care journey</p>
           </header>
             <div className="flex flex-col items-center space-y-4 w-full">
