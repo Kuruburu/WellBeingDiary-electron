@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 
-function WellBiengHeadline() {
+const WellBiengHeadline = () => {
   const naigate = useNavigate()
   const handleClick = () => {
     Cookies.remove("jwt");
