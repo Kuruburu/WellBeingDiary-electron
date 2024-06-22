@@ -42,7 +42,7 @@ const Login = ({}) => {
   };
 
   return (
-    <div className="min-h-screen p-24 bg-pink-100 flex flex-col items-center">
+    <div className="min-h-screen p-24 bg-pink-100 flex flex-col items-center space-y-12">
       <WellBiengHeadline />
       <form 
         onSubmit={handleSubmit} 

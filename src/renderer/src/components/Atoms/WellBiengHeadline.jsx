@@ -11,7 +11,7 @@ const WellBiengHeadline = () => {
   return (
     <button
      onClick={handleClick}
-     className="text-5xl font-bold text-pink-400 mb-4 lg:text-7xl">Well-being Diary</button>
+     className="text-5xl font-bold font-handwriting text-pink-600 mb-12 lg:text-7xl">Well-being Diary</button>
   )
 }
 

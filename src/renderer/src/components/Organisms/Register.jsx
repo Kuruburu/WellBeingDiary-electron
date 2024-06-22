@@ -30,7 +30,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-pink-100 flex flex-col items-center justify-center">
+    <div className="min-h-screen p-24 bg-pink-100 flex flex-col items-center space-y-12">
       <WellBiengHeadline/>
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6 text-pink-600 text-center">Register</h2>
