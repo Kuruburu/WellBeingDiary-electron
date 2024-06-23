@@ -1,6 +1,6 @@
-# wbde
+# WellBeing Diary UI
 
-An Electron application with React
+An Electron application with React and Ttailwind
 
 ## Recommended IDE Setup
 
