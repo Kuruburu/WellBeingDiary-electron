@@ -1,6 +1,6 @@
 # WellBeing Diary UI
 
-An Electron application with React and Ttailwind
+An Electron application with React and Tailwind that's a follow up to the previous API project
 
 ## Recommended IDE Setup
 
